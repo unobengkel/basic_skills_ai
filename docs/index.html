@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Belajar Skills AI - Dokumentasi</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav>
+        <div class="container nav-content">
+            <a href="#" class="logo">Skills AI</a>
+            <ul class="nav-links">
+                <li><a href="#informasi">Informasi</a></li>
+                <li><a href="#setup">Setup</a></li>
+                <li><a href="#penggunaan">Penggunaan</a></li>
+                <li><a href="#belajar">Mempelajari</a></li>
+            </ul>
+            <button class="theme-toggle" id="theme-btn">
+                <span id="theme-icon">🌙</span>
+                <span id="theme-text">Mode Gelap</span>
+            </button>
+        </div>
+    </nav>
+
+    <main class="container">
+        <section id="informasi">
+            <h1>Belajar Skills AI</h1>
+            <p>Selamat datang di dokumentasi <strong>Belajar Skills AI</strong>. Proyek ini mendemonstrasikan bagaimana membangun AI Agent prosedural yang mampu menjalankan fungsi-fungsi spesifik (skills) secara otomatis dan logis.</p>
+            <div class="card">
+                <h2>Apa itu Skills AI?</h2>
+                <p>Skills AI atau Agentic Workflow adalah kemampuan model bahasa besar (LLM) untuk berinteraksi dengan dunia nyata melalui kode. Agent tidak hanya sekadar bicara, tapi bisa mengambil tindakan seperti mengecek stok gudang, menghitung data, hingga mengirim email secara mandiri.</p>
+            </div>
+        </section>
+
+        <section id="setup">
+            <h2>Cara Setup & Instalasi</h2>
+            <div class="card">
+                <p>Ikuti langkah-langkah berikut untuk menjalankan agent di komputer lokal Anda:</p>
+                <ol style="margin-left: 1.5rem; margin-top: 1rem;">
+                    <li>Pastikan Anda memiliki <strong>Python 3.8+</strong> terinstall.</li>
+                    <li>Clone atau unduh folder <code>belajar_skills_ai</code>.</li>
+                    <li>Buka terminal dan instal dependensi:<br>
+                        <pre>pip install -r requirements.txt</pre>
+                    </li>
+                    <li>Atur API Key DeepSeek Anda:<br>
+                        <pre>set DEEPSEEK_API_KEY=your_key_here</pre>
+                    </li>
+                </ol>
+            </div>
+        </section>
+
+        <section id="penggunaan">
+            <h2>Cara Penggunaan</h2>
+            <p>Menjalankan agent sangatlah mudah. Cukup panggil script utama:</p>
+            <pre>python app.py</pre>
+            <div class="card">
+                <h3>Contoh Prompt</h3>
+                <p>Anda bisa mencoba memberikan instruksi kompleks seperti:</p>
+                <code style="display: block; margin: 1rem 0; padding: 1rem; background: var(--accent-light);">"Saya ingin pesan keyboard, email saya adi@example.com."</code>
+                <p>Agent akan otomatis:<br>
+                    1. Memeriksa stok keyboard.<br>
+                    2. Menghitung harga.<br>
+                    3. Mengirim konfirmasi ke email yang disebutkan.
+                </p>
+            </div>
+        </section>
+
+        <section id="belajar">
+            <h2>Cara Mempelajari</h2>
+            <p>Ingin mendalami bagaimana logic agent bekerja? Fokuslah pada 3 bagian kunci di file <code>app.py</code>:</p>
+            <div class="card">
+                <h3>1. Tool Definition</h3>
+                <p>Lihat bagaimana kita mendefinisikan fungsi Python dan skema JSON-nya untuk "mengajar" AI cara memanggilnya.</p>
+            </div>
+            <div class="card">
+                <h3>2. The Agent Loop</h3>
+                <p>Perhatikan struktur <code>while True</code> yang menangani <code>tool_calls</code> secara berulang hingga tugas tuntas.</p>
+            </div>
+            <div class="card">
+                <h3>3. System Message</h3>
+                <p>Eksperimenlah dengan mengubah instruksi sistem untuk mengubah perilaku prosedural sang Agent.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Belajar Skills AI Project. Dibuat dengan antusiasme.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
